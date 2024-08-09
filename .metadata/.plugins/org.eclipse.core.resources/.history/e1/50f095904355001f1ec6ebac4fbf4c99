@@ -1,0 +1,9 @@
+package synchrozied;
+
+class Thread_abc extends Thread {
+	
+}
+
+class Thread_xyz extends Thread {
+	
+}

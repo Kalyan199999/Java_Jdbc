@@ -1,0 +1,55 @@
+package Threads;
+
+class MyThread extends Thread
+{
+	
+//	Running State
+    @Override
+    public void run()
+    {
+        System.out.println("Priority of My Thread:"+Thread.currentThread().getPriority());
+        
+        
+//        Blocked State
+        try {
+        	
+			Thread.sleep(1000);
+			
+		} catch (InterruptedException e) {
+			
+			e.printStackTrace();
+		}
+
+        for(int i=1;i<=5;i++)
+        {
+           
+            System.out.println(i+"-->"+Thread.currentThread().getName());
+        }
+        
+//        Teriminate State
+    }
+}
+
+
+public class Thread_1 {
+
+	public static void main(String[] args) {
+		Thread mainThreadName = Thread.currentThread();
+
+        System.out.println("Main thread Name:"+mainThreadName.getName());
+        System.out.println("Priority of Main Thread:"+mainThreadName.getPriority());
+
+//        New State
+        MyThread t1 = new MyThread();
+
+        MyThread t2 = new MyThread();
+
+//        Runnable State
+        t1.start();
+        t2.start();
+
+        t2.setPriority(10);
+
+	}
+
+}

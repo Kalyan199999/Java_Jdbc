@@ -1,0 +1,18 @@
+package com.database;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class MYJDBCApp {
+
+	public static void main(String[] args) {
+		
+		String url = "jdbc:mysql://localhost:3306/student";
+		String userName = "root";
+		String password  = "K@lyan19";
+		
+		Connection con = DriverManager.getConnection(url,userName,password);
+		
+	}
+
+}

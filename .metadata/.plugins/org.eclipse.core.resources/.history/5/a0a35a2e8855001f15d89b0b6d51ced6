@@ -1,0 +1,43 @@
+package com.database;
+
+import java.sql.SQLException;
+
+import java.sql.DriverManager;
+import java.sql.Connection;
+import java.sql.Statement;
+
+public class MYJDBCApp {
+
+	public static void main(String[] args) throws SQLException {
+		
+		String url = "jdbc:mysql://localhost:3306/mydatabase";
+		
+		String userName = "root";
+		
+		String password  = "K@lyan19";
+		
+		Connection con = null;
+		
+//		Creating a connection 
+		
+		con = DriverManager.getConnection(url,userName,password);
+		
+		System.out.println("Connection successful...");
+		
+		
+		System.out.println(con);
+		
+//		executing the sql queries
+		
+		Statement stmt = con.createStatement();
+		System.out.println(stmt);
+		
+		String query = "select * from student";
+		boolean x = stmt.execute(query);
+		System.out.println(x);
+		
+		
+		
+	}
+
+}

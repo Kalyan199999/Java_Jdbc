@@ -1,0 +1,22 @@
+package Threads;
+
+public class Thread_1 {
+
+	public static void main(String[] args) {
+		Thread mainThreadName = Thread.currentThread();
+
+        System.out.println("Main thread Name:"+mainThreadName.getName());
+        System.out.println("Priority of Main Thread:"+mainThreadName.getPriority());
+
+        MyThread t1 = new MyThread();
+
+        MyThread t2 = new MyThread();
+
+        t1.start();
+        t2.start();
+
+        t2.setPriority(10);
+
+	}
+
+}

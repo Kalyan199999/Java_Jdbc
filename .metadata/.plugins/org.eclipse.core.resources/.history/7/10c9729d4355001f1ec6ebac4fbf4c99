@@ -1,0 +1,14 @@
+package synchrozied;
+
+class Thread_abc extends Thread {
+	SyncThread st;
+	
+	public void run() {
+		
+	}
+	
+}
+
+class Thread_xyz extends Thread {
+	
+}

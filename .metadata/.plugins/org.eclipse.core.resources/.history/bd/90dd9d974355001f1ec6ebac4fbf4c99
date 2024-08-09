@@ -1,0 +1,10 @@
+package synchrozied;
+
+class Thread_abc extends Thread {
+	SyncThread st;
+	
+}
+
+class Thread_xyz extends Thread {
+	
+}

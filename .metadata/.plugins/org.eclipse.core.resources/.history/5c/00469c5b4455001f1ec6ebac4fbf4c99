@@ -1,0 +1,14 @@
+package synchrozied;
+
+public class SyncTest {
+
+	public static void main(String[] args) {
+		
+		SyncThread s = new SyncThread();
+		Thread_abc abc = new Thread_abc();
+		
+		Thread_xyz xyz = new Thread_xyz();
+
+	}
+
+}
