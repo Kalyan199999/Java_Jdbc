@@ -1,0 +1,10 @@
+package com.static_database_access;
+
+import java.sql.Connection;
+
+public class ShowData {
+	
+	public static void showData() {
+		Connection con = ConnectionClass.getConnectionObject();
+	}
+}

@@ -1,0 +1,8 @@
+package com.static_database_access;
+
+public class Insertion {
+	public static void insertData()
+	{
+		Scanner sc = new Scanner(System.in);
+	}
+}

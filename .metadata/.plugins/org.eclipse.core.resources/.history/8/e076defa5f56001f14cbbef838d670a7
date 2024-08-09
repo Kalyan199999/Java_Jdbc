@@ -1,0 +1,22 @@
+package com.static_database_access;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Scanner;
+
+public class Deletion {
+	
+	public static void deleteData() throws SQLException
+	{
+		Scanner sc = new Scanner(System.in);
+		Connection con = ConnectionClass.getConnectionObject();
+		
+		Statement st = con.createStatement();
+		String query = "delete from sample where id=";
+		
+		con.close();
+		
+	}
+
+}

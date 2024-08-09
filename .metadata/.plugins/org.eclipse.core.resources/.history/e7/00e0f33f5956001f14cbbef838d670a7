@@ -1,0 +1,12 @@
+package com.static_database_access;
+
+import java.util.Scanner;
+
+public class Insertion {
+	public static void insertData()
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the data to insert:");
+		int id = 
+	}
+}

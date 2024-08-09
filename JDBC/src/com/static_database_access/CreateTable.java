@@ -45,9 +45,8 @@ public class CreateTable {
 			System.out.println("Error Occured!");
 		}
 		
+		st.close();
 		con.close();
-//		System.out.println(iscreated);
-//		System.out.println(query);
 		
 	}
 }

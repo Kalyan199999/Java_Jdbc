@@ -1,0 +1,40 @@
+package com.static_database_access;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Scanner;
+
+public class Insertion {
+	public static void insertData() throws SQLException
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the data to insert");
+		System.out.print("Enter the ID:");
+		int id = sc.nextInt();
+		
+		System.out.print("Enter the NAME:");
+		String name = sc.next();
+		
+		System.out.print("Enter the AGE");
+		int age = sc.nextInt();
+		
+		Connection con = ConnectionClass.getConnectionObject();
+		
+		String query = "insert into sample values("+id+",'"+name+"',"+age+")";
+		
+		Statement st = con.createStatement();
+		boolean isInserted = st.execute(query);
+		
+		if(!isInserted)
+		{
+			System.out.println("Successfully inserted the new instance!");
+		}
+		else {
+			System.out.println("Error");
+		}
+		
+		st.close();
+		con.close();
+	}
+}

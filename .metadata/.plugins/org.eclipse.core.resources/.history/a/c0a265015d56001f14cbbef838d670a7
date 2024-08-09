@@ -1,0 +1,8 @@
+package com.static_database_access;
+
+public class ShowData {
+	
+	public static void showData() {
+		
+	}
+}

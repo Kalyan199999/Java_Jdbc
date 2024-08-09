@@ -1,0 +1,51 @@
+package com.static_database_access;
+
+import java.util.ArrayList;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+class Data
+{
+	static int id ,age;
+	static String name;
+	Data(int id,String anme,int age)
+	{
+		this.id = id;
+		this.name = name;
+		this.age = age;
+	}
+}
+
+public class ShowData {
+	
+	public static void showData() throws SQLException {
+		
+		Connection con = ConnectionClass.getConnectionObject();
+		
+		String query = "select * from sample";
+		Statement st  = con.createStatement();
+		ResultSet rs = st.executeQuery(query);
+		
+		ArrayList<ArrayList<Data>> res = new ArrayList<>();
+		while(rs.next())
+		{
+			ArrayList<Data> l =new ArrayList<Data>();
+			
+			l.add(new Data(rs.getInt("id") , rs.getString("name") , rs.getInt("age")));
+			res.add(l);
+			
+//			System.out.println(rs.getInt("id")+" "+rs.getString("name")+" "+rs.getString("age"));
+		}
+		
+//		System.out.println(res);
+		for(ArrayList<Data> list: res)
+		{
+			System.out.println(list.size());
+			Data data = list;
+//			System.out.println("["+list.get(0)+","+list.get(1)+","+list.get(2)+"]");
+		}
+		con.close();
+	}
+}

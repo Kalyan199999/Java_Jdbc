@@ -18,14 +18,15 @@ public class StaticJDBC {
 		l.add("3.Delete an instance");
 		l.add("4.Update an instance");
 		l.add("5.Show Tables");
-		l.add("6.Exit");
+		l.add("6.Show data");
+		l.add("7.Exit");
 		
 		
 		System.out.println(l);
         System.out.print("Choose a option:");
         idx = sc.nextInt();
 		
-		while(idx != 6)
+		while(idx != 7)
 		{
 			switch(idx)
 			{
@@ -36,14 +37,17 @@ public class StaticJDBC {
 				   
 			   case 2:
 //				   insert a row
+				   Insertion.insertData();
 				   break;
 				   
 			   case 3:
 //				   delete a row
+				   Deletion.deleteData();
 				   break;
 				   
 			   case 4:
 //				   update  a row
+				   
 				   break;
 				   
 			   case 5:
@@ -51,6 +55,10 @@ public class StaticJDBC {
 //				   ShowTables.showTables();
 				   break;
 				   
+			   case 6:
+//				   show the data in the tables
+				   ShowData.showData();
+				   break;
 			   default :
 				   System.out.println("Enter a valid option!");
 					 
@@ -61,8 +69,6 @@ public class StaticJDBC {
 	        idx = sc.nextInt();
 		}
 		
-		
 		System.out.println("All the Operations are successfull!");
-		
 	}
 }

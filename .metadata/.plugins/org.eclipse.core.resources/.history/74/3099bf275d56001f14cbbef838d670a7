@@ -1,0 +1,14 @@
+package com.static_database_access;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+public class ShowData {
+	
+	public static void showData() throws SQLException {
+		
+		Connection con = ConnectionClass.getConnectionObject();
+		
+		con.close();
+	}
+}
