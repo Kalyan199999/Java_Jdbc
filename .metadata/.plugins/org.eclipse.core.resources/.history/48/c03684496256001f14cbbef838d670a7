@@ -47,7 +47,7 @@ public class StaticJDBC {
 				   
 			   case 4:
 //				   update  a row
-				   Update.updateData();
+				   
 				   break;
 				   
 			   case 5:
