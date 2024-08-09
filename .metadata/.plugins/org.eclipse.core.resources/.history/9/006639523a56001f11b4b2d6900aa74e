@@ -1,0 +1,19 @@
+package com.static_database_access;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class ConnectionClass {
+	public static Connection getConnectionObject() throws SQLException
+	{
+		String url = DatabaseCredientels.getUrl();
+		String userName = DatabaseCredientels.getUserName();
+		String password = DatabaseCredientels.getPassword();
+		
+		Connection con = DriverManager.getConnection(url , userName,password);
+		
+		return con;
+		
+	}
+}

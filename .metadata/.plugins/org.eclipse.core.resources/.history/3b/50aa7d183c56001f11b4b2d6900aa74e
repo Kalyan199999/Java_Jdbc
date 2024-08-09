@@ -1,0 +1,52 @@
+package com.static_database_access;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class StaticJDBC {
+
+	public static void main(String[] args) {
+		
+		Scanner sc=  new Scanner(System.in);
+		int idx = 0;
+		
+		ArrayList<String> l = new ArrayList<>();
+		
+		l.add("1.Create a table");
+		l.add("2.Insert an instance");
+		l.add("3.Delete an instance");
+		l.add("4.Update an instance");
+		l.add("5.Exit");
+		
+		
+		System.out.println(l);
+        System.out.println("Choose a option:");
+		
+//		while(idx != 5)
+//		{
+//			switch(idx)
+//			{
+//			   case 1:
+////				   create table
+//				   break;
+//				   
+//			   case 2:
+////				   insert a row
+//				   break;
+//				   
+//			   case 3:
+////				   delete a row
+//				   break;
+//				   
+//			   case 4:
+////				   update  a row
+//				   break;
+//				   
+//			   default :
+//				   System.out.println("Enter a valid option!");
+//					 
+//			}
+//		}
+	}
+
+}

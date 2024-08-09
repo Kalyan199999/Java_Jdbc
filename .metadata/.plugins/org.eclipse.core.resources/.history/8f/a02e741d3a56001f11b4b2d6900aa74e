@@ -1,0 +1,12 @@
+package com.static_database_access;
+
+import java.sql.DriverManager;
+
+public class ConnectionClass {
+	public static Connection getConnectionObject()
+	{
+		String url = DatabaseCredientels.getUrl();
+		String userName = DatabaseCredientels.getUserName();
+//		Connection con = DriverManager.getConnection(null, null, null);
+	}
+}

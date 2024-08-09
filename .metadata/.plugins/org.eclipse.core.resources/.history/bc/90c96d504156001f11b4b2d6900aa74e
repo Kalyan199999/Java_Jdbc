@@ -1,0 +1,53 @@
+package com.static_database_access;
+
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Scanner;
+import java.sql.Connection;
+
+public class CreateTable {
+	
+	public static void createTable() throws SQLException
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Enter the name of the table:");
+		String tablename = sc.nextLine();
+		
+		System.out.print("Enter the number of columns of the table:");
+		int n = sc.nextInt();
+		
+		String query = "create table "+tablename+"(";
+		
+		for(int i=0;i<n;i++)
+		{
+			System.out.print("Enter the NAME of the "+ (i+1)+ " column of the table:");
+			query += sc.next()+" ";
+			
+			System.out.print("Enter the TYPE of the "+ (i+1)+ " column of the table:");
+			
+			query += sc.next()+",";
+		}
+		
+		query = query.substring(0, query.length()-1) +")";
+		
+       Connection con = ConnectionClass.getConnectionObject();
+		
+		Statement st = con.createStatement();
+		
+		boolean iscreated = st.execute(query);
+		
+		System.out.println(iscreated);
+		
+		if(!iscreated)
+		{
+			System.out.println("Table created Successfully!");
+		}
+		else {
+			System.out.println("Error Occured!");
+		}
+		
+		System.out.println(query);
+		
+	}
+}

@@ -1,0 +1,5 @@
+package com.static_database_access;
+
+public class DatabaseCredientels {
+	final static String url = "jdbc:mysql://localhost:3306/mydatabase";
+}

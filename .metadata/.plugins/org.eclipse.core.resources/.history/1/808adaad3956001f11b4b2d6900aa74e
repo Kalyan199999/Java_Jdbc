@@ -1,0 +1,15 @@
+package com.static_database_access;
+
+public class DatabaseCredientels {
+	
+	final static private String url = "jdbc:mysql://localhost:3306/mydatabase";
+	
+	final static private String userName = "root";
+	
+	final static private String password  = "K@lyan19";
+	
+	public static String getUrl()
+	{
+		return url;
+	}
+}

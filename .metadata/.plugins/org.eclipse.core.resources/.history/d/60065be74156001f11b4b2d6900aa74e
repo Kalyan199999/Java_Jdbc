@@ -1,0 +1,22 @@
+package com.static_database_access;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class ShowTables {
+	
+	public static void showTables() throws SQLException {
+		
+        Connection con = ConnectionClass.getConnectionObject();
+		
+		Statement st = con.createStatement();
+		
+		String query = "show tables;";
+		
+		boolean isavail = st.execute(query);
+		
+		
+	}
+
+}

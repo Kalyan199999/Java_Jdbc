@@ -1,0 +1,16 @@
+package com.static_database_access;
+
+import java.sql.Connection;
+import java.sql.Statement;
+
+public class ShowTables {
+	
+	public static void showTables() {
+        Connection con = ConnectionClass.getConnectionObject();
+		
+		Statement st = con.createStatement();
+		
+		boolean iscreated = st.execute(query);
+	}
+
+}
