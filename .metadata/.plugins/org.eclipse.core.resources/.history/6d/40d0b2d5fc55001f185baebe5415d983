@@ -61,8 +61,6 @@ public class MYJDBCApp {
 		}
 		
 		PreparedStatement ps = con.prepareStatement("select * from student where id = ?");
-		ps.setInt(1, 2);
-		
 		System.out.println(ps);
 		
 		ResultSet r = ps.executeQuery();

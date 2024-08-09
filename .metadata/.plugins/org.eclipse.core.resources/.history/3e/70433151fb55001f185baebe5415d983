@@ -2,7 +2,6 @@ package com.database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -38,9 +37,7 @@ public class MYJDBCApp {
 		boolean x = stmt.execute(query);
 		System.out.println(x);
 		
-	
-		
-		String dqlQuery = "select * from student ";
+		String dqlQuery = "select * from student";
 		ResultSet rs = stmt.executeQuery(dqlQuery);
 		
 		System.out.println(rs);
@@ -59,19 +56,10 @@ public class MYJDBCApp {
 			System.out.println("column:"+i+" "+metadata.getColumnName(i));
 			
 		}
-		
-		PreparedStatement ps = con.prepareStatement("select * from student where id = ?");
-		ps.setInt(1, 2);
-		
-		System.out.println(ps);
-		
-		ResultSet r = ps.executeQuery();
-		System.out.println(r);
-		while(r.next())
-		{
-			System.out.println(r.getInt(1)+" "+r.getString(2)+" "+r.getString(3)+" "+r.getInt("age")+" "+r.getInt(5));
-		}
+	
+
 		
 		con.close();
 	}
+
 }

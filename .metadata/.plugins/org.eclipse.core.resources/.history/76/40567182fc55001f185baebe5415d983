@@ -60,17 +60,10 @@ public class MYJDBCApp {
 			
 		}
 		
-		PreparedStatement ps = con.prepareStatement("select * from student where id = ?");
-		ps.setInt(1, 2);
-		
+		PreparedStatement ps = con.prepareStatement(dqlQuery);
 		System.out.println(ps);
 		
-		ResultSet r = ps.executeQuery();
-		System.out.println(r);
-		while(r.next())
-		{
-			System.out.println(r.getInt(1)+" "+r.getString(2)+" "+r.getString(3)+" "+r.getInt("age")+" "+r.getInt(5));
-		}
+		rs = ps.executeQuery();
 		
 		con.close();
 	}
