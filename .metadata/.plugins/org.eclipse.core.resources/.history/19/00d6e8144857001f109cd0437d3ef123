@@ -1,0 +1,10 @@
+package com.abctravels;
+
+import java.sql.SQLException;
+import java.util.Scanner;
+
+public class LogIn {
+	public static void login() throws SQLException {
+		Scanner sc = new Scanner(System.in);
+	}
+}

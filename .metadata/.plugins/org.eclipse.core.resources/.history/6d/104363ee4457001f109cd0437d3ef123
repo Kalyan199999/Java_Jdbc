@@ -1,0 +1,11 @@
+package com.abctravels;
+
+public class UserDetalis {
+	
+	String email , f_name ,  l_name, mobile, gender, password, String status;
+	
+	public UserDetalis(String email , String f_name , String l_name,String mobile,String gender,String password,int failedCount , String status)
+	{
+		
+	}
+}

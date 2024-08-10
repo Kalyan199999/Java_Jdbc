@@ -1,0 +1,14 @@
+package com.abctravels;
+
+import java.util.Scanner;
+
+public class UserRegistration {
+	
+	public static void registration() {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		
+	}
+
+}

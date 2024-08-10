@@ -1,0 +1,74 @@
+package com.abctravels;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+import com.static_database_access.ConnectionClass;
+
+public class LogIn {
+	public static void login() throws SQLException {
+		
+		Scanner sc = new Scanner(System.in);
+		
+        Map<String, String> cretientials = new HashMap<>();
+		
+		Connection con = ConnectionClass.getConnectionObject();
+		
+		String query = " select email,password from abctravels";
+		
+		PreparedStatement ps = con.prepareStatement(query);
+		
+		ResultSet result = ps.executeQuery();
+		
+		while(result.next())
+		{
+			String mail = result.getString(1);
+			String pass = result.getString(2);
+			
+			cretientials.put(mail,pass);
+		}
+		
+		System.out.print("Enter your EMAIL:");
+		String email = sc.next();
+		
+		System.out.print("Enter your PASSWORD:");
+		String password = sc.next();
+		
+		int failure = 0;
+		
+		while(!cretientials.containsKey(email) || !cretientials.get(email).equals(password) )
+		{
+			System.out.print("Enter your EMAIL:");
+			email = sc.next();
+			
+			System.out.print("Enter your PASSWORD:");
+			password = sc.next();
+			
+			failure++;
+		}
+		
+		query =  "select * from abctravels where email=?";
+		ps = con.prepareStatement(query);
+		ps.setString(1, email);
+		
+		result = ps.executeQuery();
+		
+		if(failure<=5)
+		{
+//			details of user
+			System.out.println();
+		}
+		else {
+			
+		}
+		
+		
+		
+		
+	}
+}

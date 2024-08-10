@@ -1,0 +1,16 @@
+package com.abctravels;
+
+import java.sql.SQLException;
+import java.util.Scanner;
+
+public class LogIn {
+	public static void login() throws SQLException {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter your EMAIL:");
+		String email = sc.next();
+		System.out.print("Enter your EMAIL:");
+		String password = sc.next();
+		
+	}
+}

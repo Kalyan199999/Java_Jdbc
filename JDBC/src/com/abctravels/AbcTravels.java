@@ -1,19 +1,53 @@
 package com.abctravels;
 
-import java.sql.Date;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class AbcTravels {
-	public static void main(String[] args) {
-//		System.out.println("kalyan");
-		Date d = new Date(3);
-		System.out.println(d);
+	public static void main(String[] args) throws SQLException {
 		
-		String email = "kalyanuma@gmailcom";
+		Scanner sc = new Scanner(System.in);
+		ArrayList<String> options = new ArrayList<>();
 		
-		System.out.println(email.contains("@"));
-		System.out.println(email.contains("."));
-		System.out.println(email.contains("@."));
+		options.add("1.Registration");
+		options.add("2.Login");
+		options.add("3.Plan Journay");
+		options.add("4.Exit");	
 		
-		System.out.println(email.indexOf('.') - email.indexOf('@'));
+		System.out.println(options);
+		System.out.print("Enter your Option:");
+		int option = sc.nextInt();
+		
+		while(option != 4)
+		{
+			switch (option) {
+			
+			case 1:
+//				user registration
+				UserRegistration.registration();
+				
+				break;
+				
+			case 2:
+//				Login
+				LogIn.login();
+				break;
+			
+			case 3:
+//				Plan journay
+				break;
+
+			default:
+				System.out.println("Enter a valid option!");
+				break;
+			}
+			
+			System.out.println(options);
+			System.out.print("Enter your Option:");
+			option = sc.nextInt();
+		}
+		
+		System.out.println("Thank You! Visit again!");
 	}
 }

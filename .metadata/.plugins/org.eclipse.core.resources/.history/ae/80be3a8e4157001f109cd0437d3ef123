@@ -1,0 +1,24 @@
+package com.abctravels;
+
+import java.util.Scanner;
+
+public class UserRegistration {
+	
+	public static void registration() {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Enter an EMAIL(abcd@gmail.com):");
+		
+		String email = sc.next();
+		
+		while((!email.contains("@")) || (!email.contains(".")) || ((email.indexOf('.')) - (email.indexOf('@')) < 0) )
+		{
+			System.out.print("Enter a valid EMAIL(abcd@gmail.com):");
+			
+			String email = sc.next();
+		}
+		
+	}
+
+}

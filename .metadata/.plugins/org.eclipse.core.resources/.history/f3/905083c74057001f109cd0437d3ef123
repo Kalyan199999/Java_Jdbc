@@ -1,0 +1,11 @@
+package com.abctravels;
+
+public class UserRegistration {
+	
+	public static void registration() {
+		
+		
+		
+	}
+
+}

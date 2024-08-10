@@ -1,0 +1,46 @@
+package com.abctravels;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class AbcTravels {
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		ArrayList<String> options = new ArrayList<>();
+		
+		options.add("1.Registration");
+		options.add("2.Login");
+		options.add("3.Plan Journay");
+		options.add("4.Exit");	
+		System.out.print("Enter your Option:");
+		int option = sc.nextInt();
+		
+		System.out.println(options);
+		while(option != 4)
+		{
+			switch (option) {
+			
+			case 1:
+//				user registration
+				UserRegistration.registration();
+				
+				break;
+				
+			case 2:
+//				Login
+				
+				break;
+			
+			case 3:
+//				Plan journay
+				break;
+
+			default:
+				System.out.println("Enter a valid option!");
+				break;
+			}
+			System.out.println(options);
+		}
+	}
+}

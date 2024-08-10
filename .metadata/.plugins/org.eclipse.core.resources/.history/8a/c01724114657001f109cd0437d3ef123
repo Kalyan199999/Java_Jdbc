@@ -1,0 +1,9 @@
+package com.abctravels;
+
+public class InsertIntoDB {
+	
+	public static void name() {
+		
+	}
+
+}

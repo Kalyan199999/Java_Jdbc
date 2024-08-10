@@ -1,0 +1,9 @@
+package com.abctravels;
+
+public class UserDetalis {
+	
+	public UserDetalis()
+	{
+		
+	}
+}

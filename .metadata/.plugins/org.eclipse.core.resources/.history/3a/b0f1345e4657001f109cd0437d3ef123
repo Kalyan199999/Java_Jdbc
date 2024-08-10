@@ -1,0 +1,17 @@
+package com.abctravels;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import com.static_database_access.ConnectionClass;
+
+public class InsertIntoDB {
+	
+	public static void insert(UserDetalis user) throws SQLException {
+		
+		Connection con = ConnectionClass.getConnectionObject();
+		
+		String query = "insert into abctravels values(?,?,?,?,?,?,?,?)";
+	}
+
+}

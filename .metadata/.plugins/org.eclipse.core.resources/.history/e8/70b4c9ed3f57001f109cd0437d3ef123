@@ -1,0 +1,11 @@
+package com.abctravels;
+
+import java.util.Scanner;
+
+public class AbcTravels {
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		Arra
+	}
+}
