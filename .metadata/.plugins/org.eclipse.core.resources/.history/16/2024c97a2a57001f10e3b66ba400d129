@@ -1,0 +1,9 @@
+package com.dynamic_database_access;
+
+public class Insertion {
+	
+	public static void insertData()
+	{
+		
+	}
+}

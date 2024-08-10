@@ -1,0 +1,9 @@
+package com.dynamic_database_access;
+
+import java.sql.SQLException;
+
+public class Deletion {
+	public static void deleteData() throws SQLException {
+		
+	}
+}

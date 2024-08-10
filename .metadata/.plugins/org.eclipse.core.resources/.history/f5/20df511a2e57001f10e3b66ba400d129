@@ -1,0 +1,15 @@
+package com.dynamic_database_access;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import com.static_database_access.ConnectionClass;
+
+public class Updation {
+	public static void updateData() throws SQLException
+	{
+		Connection con = ConnectionClass.getConnectionObject();
+		
+		
+	}
+}

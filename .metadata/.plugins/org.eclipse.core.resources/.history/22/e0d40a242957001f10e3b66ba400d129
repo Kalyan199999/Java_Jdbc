@@ -1,0 +1,12 @@
+package com.dynamic_database_access;
+
+import com.static_database_access.ConnectionClass;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Connection con = ConnectionClass.getConnectionObject();
+
+	}
+
+}

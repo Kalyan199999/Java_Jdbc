@@ -1,0 +1,19 @@
+package com.abctravels;
+
+import java.sql.Date;
+
+public class AbcTravels {
+	public static void main(String[] args) {
+//		System.out.println("kalyan");
+		Date d = new Date(3);
+		System.out.println(d);
+		
+		String email = "kalyanuma@gmailcom";
+		
+		System.out.println(email.contains("@"));
+		System.out.println(email.contains("."));
+		System.out.println(email.contains("@."));
+		
+		System.out.println(email.indexOf('.') );
+	}
+}
